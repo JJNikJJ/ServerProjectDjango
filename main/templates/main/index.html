@@ -1,10 +1,18 @@
 <!--Иcпользование Jinja - шаблонизатора -->
 {% extends 'main/layout.html' %}
 {% block title_block %}
-Главная страница
+{{ title }}
 {% endblock%}
 {% block content_block %}
-<h1>Главная страница</h1>
-<p> Привет меня зовут Никита</p>
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eligendi impedit itaque repellat temporibus. Accusamus aut dolore doloribus error est eveniet ex facilis illo, ipsam magni maiores maxime nam nihil nisi nobis quas quasi quia quibusdam similique sint soluta ullam?</p>
+    <button class="btn btn-warning">На страницу о нас </button>
 
+    {% for val in values %}
+        {% if val == 'Hello' %}
+            <p>{{val| upper}}</p>
+        {% endif %}
+    {% endfor%}
+</div>
 {% endblock%}
