@@ -1,0 +1,17 @@
+<!--Иcпользование Jinja - шаблонизатора -->
+{% extends 'main/layout.html' %}
+{% block title_block %}
+Удаление статьи
+{% endblock%}
+{% block content_block %}
+<div class="features">
+    <h1>Форма по добавления статьи</h1>
+    <form method="post">
+        {% csrf_token %}
+
+       <button class="btn btn-success" type="submit">Удалить статью</button>
+
+    </form>
+
+</div>
+{% endblock%}
